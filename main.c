@@ -37,3 +37,14 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
+
+
+// int main pour c
+}
+int main(void)
+{
+    // Exemple d'utilisation de print_c
+    print_c('A'); // Affiche 'A'
+    print_c('\n'); // Affiche une nouvelle ligne
+    return (0);
+}
