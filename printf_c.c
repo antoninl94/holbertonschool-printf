@@ -53,6 +53,7 @@ int print_pourcent(va_list args)
 		return (1);
 	}
 }
+/*
 int main(void) {
     char *my_string = NULL;
 

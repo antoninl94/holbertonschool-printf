@@ -38,13 +38,12 @@ int main(void)
     return (0);
 }
 
-
 // int main pour printf complet
-}
+}/*
 int main(void)
 {
     // Exemple d'utilisation de print_c
     print_c('A'); // Affiche 'A'
     print_c('\n'); // Affiche une nouvelle ligne
     return (0);
-}
+}*/

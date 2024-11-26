@@ -10,11 +10,11 @@
 typedef struct type_from
 {
 	char *fmt;
-	void (*f)(va_list args);
-} format_type;
+	int (*f)(va_list args);
+} type_format;
 
 int _printf(const char *format, ...);
-int printf_c(va_list args);
+int print_c(va_list args);
 int print_s(va_list args);
 int print_pourcent(va_list args);
 
