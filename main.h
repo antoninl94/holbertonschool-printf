@@ -16,5 +16,6 @@ typedef struct type_from
 int _printf(const char *format, ...);
 int printf_c(va_list args);
 int print_s(va_list args);
+int print_pourcent(va_list args);
 
 #endif

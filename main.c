@@ -39,7 +39,7 @@ int main(void)
 }
 
 
-// int main pour c
+// int main pour printf complet
 }
 int main(void)
 {
