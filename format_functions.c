@@ -9,9 +9,8 @@ int print_c(va_list args)
 {
 	int c = va_arg(args, int);
 
-	if (c != NULL)
-		write(1, &c, 1);
-	return(1);
+	write(1, &c, 1);
+	return (1);
 }
 
 /**
@@ -24,10 +23,29 @@ int print_s(va_list args)
 	char *str = va_arg(args, char*);
 	int s = 0;
 
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (str[s] != '\0')
 	{
 		write(1, &str[s], 1);
 		s++;
 	}
 	return (s);
+}
+
+/**
+ * print_percent - print percent symbol
+ * @args: the symbol to print (percent)
+ * Return: Always 1
+ */
+int print_percent(va_list args)
+{
+	char percent = '%';
+	(void) args;
+
+	write(1, &percent, 1);
+	return (1);
 }
