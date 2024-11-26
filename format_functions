@@ -1,0 +1,33 @@
+#include "main.h"
+
+/**
+ * print_c - print character
+ * @args: the character to print
+ * Return: Always 1 (size of a character)
+ */
+int print_c(va_list args)
+{
+	int c = va_arg(args, int);
+
+	if (c != NULL)
+		write(1, &c, 1);
+	return(1);
+}
+
+/**
+ * print_s - print string
+ * @args: the string to print
+ * Return: the size of the string
+ */
+int print_s(va_list args)
+{
+	char *str = va_arg(args, char*);
+	int s = 0;
+
+	while (str[s] != '\0')
+	{
+		write(1, &str[s], 1);
+		s++;
+	}
+	return (s);
+}
