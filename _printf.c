@@ -29,18 +29,18 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-				write(1, &percent, 1);
 			for (j = 0; j < 3; j++)
 			{
 				/*if the character match with the format letter : */
 				if (format[i] == *arr[j].fmt)
 				{
-					/*use the appropriate function*/
+					/*use the appropriate function and count*/
 					count += arr[j].f(args);
 					i++;
 				}
 			}
+			if (format[i] == '%')
+				write(1, &percent, 1);
 		}
 		else
 		{
