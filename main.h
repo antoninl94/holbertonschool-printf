@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <limits.h>
 
 typedef struct type_from
 {
@@ -17,5 +18,7 @@ int _printf(const char *format, ...);
 int print_c(va_list args);
 int print_s(va_list args);
 int print_pourcent(va_list args);
+int printed_chars(int number);
+int pirnt_d_test
 
 #endif
