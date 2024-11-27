@@ -53,6 +53,41 @@ int print_pourcent(va_list args)
 		return (1);
 	}
 }
+int pirnt_d(va_list args)
+{
+	int d = va_arg(args, int);
+	int i = 0;
+	char *str;
+	int j;
+
+	/* alloue la memoire du char */
+	str = malloc(d * sizeof(char));
+	if (str == 0)
+	{
+		return (0);
+	}
+	if (d == 0)
+	{
+		write(1 '0', 1); /*print 1 caractere ascii*/
+		return (1);
+	}
+	if (d < 0)/*coditions negatives*/
+	{
+		write(1, '-', 1); 
+		d = -d;
+		i++;  /*Incrémenter le compteur pour le signe */
+	}
+
+	j = 0;
+	while (d > 0)
+	{
+		str[j] = (d % 10) + '0';/* modulo convertiseur caractere*/
+		d /= 10;
+		j++;
+	}
+	
+	free(str);
+}
 /*
 int main(void) {
     char *my_string = NULL;
