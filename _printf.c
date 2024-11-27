@@ -16,7 +16,9 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{NULL, NULL}
 	};
-	int i = 0, j, count = 0;
+	int i = 0;
+	int j;
+	int count = 0;
 	char percent = '%';
 
 	va_start(args, format);
@@ -40,11 +42,14 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 				write(1, &percent, 1);
 		}
+		else
+		{
 		/*if the first loop don't meet '%', print the character*/
 		write(1, &format[i], 1);
 		i++;
 		/*count the number of character printed*/
 		count++;
+		}
 	}
 	va_end(args);
 	return (count);
