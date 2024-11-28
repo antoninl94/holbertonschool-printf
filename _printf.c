@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * _printf - Print character depending of the format selected
@@ -13,13 +14,13 @@ int _printf(const char *format, ...)
 	type_format arr[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_d_i},
 		{"%", print_percent},
 		{NULL, NULL}
 	};
 	int i = 0;
 	int j;
 	int count = 0;
-	char percent = '%';
 
 	va_start(args, format);
 	/*if format == NULL the loop don't initialize*/
@@ -28,6 +29,8 @@ int _printf(const char *format, ...)
 		/*if the loop meet a '%', that initialize a loop to compare the next char*/
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			i++;
 			for (j = 0; j < 3; j++)
 			{
@@ -39,8 +42,6 @@ int _printf(const char *format, ...)
 					i++;
 				}
 			}
-			if (format[i] == '%')
-				write(1, &percent, 1);
 		}
 		else
 		{
