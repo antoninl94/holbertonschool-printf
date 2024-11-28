@@ -30,11 +30,14 @@ void recursion_print(int num)
 /**
  * count_number - count printed number
  * @num: nummber to count
+ * Return: 1 if num == 0 otherwiser i
  */
 int count_number(int num)
 {
 	int i;
 
+	if (num == 0)
+		return (1);
 	for (i = 0; num >= 1; i++)
 	{
 		num = num / 10;
