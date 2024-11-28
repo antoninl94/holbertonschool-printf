@@ -61,5 +61,5 @@ int print_d_i(va_list args)
 	int num = va_arg(args, int);
 
 	recursion_print(num);
-	return (0);
+	return (count_number(num));
 }
