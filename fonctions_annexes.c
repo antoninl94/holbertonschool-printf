@@ -38,9 +38,18 @@ int count_number(int num)
 {
 	int i;
 
-	if (num < 0)
+	if (num < 0 && num != INT_MIN)
 	{
 		num = num * -1;
+		for (i = 0; num >= 1; i++)
+		{
+			num = num / 10;
+		}
+		return (i + 1);
+	}
+	if (num == INT_MIN)
+	{
+		num = num - 1;
 		for (i = 0; num >= 1; i++)
 		{
 			num = num / 10;
