@@ -15,9 +15,14 @@ int strint(int num)
 {
 	int i = 0;
 
-	while (num[i] != recursion_print)
+	if (num < 0)
+	{
+		num = -num;
+	}
+	while (num != 0)
 	{
 		i++;
+		num /= 10;
 	}
 	return (i);
 }
@@ -32,10 +37,12 @@ int recursion_print(int num)
 	if (num < 0)
 	{
 		 _putchar('-');
-		(num * -1);
+		 res++;
+		num = -num;
 	}
-	if (num > 9)
-		res = recursion_print(num / 10);
-	res = _putchar(num % 10 + '0');
-	return (strint(res));
+	if (num > 10)
+		res += recursion_print(num / 10);
+		_putchar((num % 10) + '0');
+		res++;
+	return (res);
 }
