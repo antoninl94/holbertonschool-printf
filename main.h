@@ -14,6 +14,7 @@ int print_c(va_list args);
 int print_percent(va_list args);
 int print_d_i(va_list args);
 void recursion_print(int a);
+int count_number(int num);
 
 /**
  * struct format_type - link a function to the format letter
