@@ -17,6 +17,8 @@ int _putchar(char c)
  */
 void recursion_print(int num)
 {
+	if (num < 1)
+		return (-1);
 	if (num < 0)
 	{
 		_putchar('-');
