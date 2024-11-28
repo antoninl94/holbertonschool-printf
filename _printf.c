@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"c", print_c},
 		{"s", print_s},
 		{"d", print_d_i},
+		{"i", print_d_i},
 		{"%", print_percent},
 		{NULL, NULL}
 	};
@@ -32,7 +33,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 			i++;
-			for (j = 0; j < 3; j++)
+			for (j = 0; arr[j].fmt != NULL; j++)
 			{
 				/*if the character match with the format letter : */
 				if (format[i] == *arr[j].fmt)
@@ -40,6 +41,7 @@ int _printf(const char *format, ...)
 					/*use the appropriate function and count*/
 					count += arr[j].f(args);
 					i++;
+					break;
 				}
 			}
 		}

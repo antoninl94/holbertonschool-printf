@@ -58,26 +58,8 @@ int print_percent(va_list args)
  */
 int print_d_i(va_list args)
 {
-	int size = 0;
-	int num1 = va_arg(args, int);
-	int num2;
+	int num = va_arg(args, int);
 
-	while (num1 != 0)
-	{
-		if (num1 < 0)
-		{
-			num1 = -num1;
-			_putchar('-');
-			size++;
-		}
-		else
-		{
-			num2 = num1 % 10;
-			_putchar('0' + num2);
-			size++;
-			num1--;
-			break;
-		}
-	}
-	return (size);
+	recursion_print(num);
+	return (0);
 }

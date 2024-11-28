@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -12,7 +13,7 @@ int print_s(va_list args);
 int print_c(va_list args);
 int print_percent(va_list args);
 int print_d_i(va_list args);
-void recursion_print_d_i(int a);
+void recursion_print(int a);
 
 /**
  * struct format_type - link a function to the format letter
