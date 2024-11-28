@@ -38,16 +38,16 @@ int count_number(int num)
 
 	if (num < 0)
 	{
-		num = num * -1;
+		num = num * -1; /*convert negative to positive */
 		for (i = 0; num >= 1; i++)
 		{
 			num = num / 10;
 		}
-		return(i + 1);
+		return (i + 1); /*return the count of printed int + '-' symbol*/
 	}
 	for (i = 0; num >= 1; i++)
 	{
 		num = num / 10;
 	}
-	return (i);
+	return (i); /*return the count of printed int*/
 }

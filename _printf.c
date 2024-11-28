@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(args, format);
 	/*if format == NULL the loop don't initialize*/
 	while (format[i] != '\0')
@@ -33,6 +32,7 @@ int _printf(const char *format, ...)
 		/*if the loop meet a '%', that initialize a loop to compare the next char*/
 		if (format[i] == '%')
 		{
+			/*if the next character is \0 return (-1)(ERROR) */
 			if (format[i + 1] == '\0')
 				return (-1);
 			i++;
