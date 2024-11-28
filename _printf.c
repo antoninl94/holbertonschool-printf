@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <limits.h>
 /**
  * _printf - Print character depending of the format selected
  * @format: format selected to print

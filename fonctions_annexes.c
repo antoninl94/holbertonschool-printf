@@ -1,5 +1,7 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
  * _putchar - print character
@@ -17,14 +19,14 @@ int _putchar(char c)
  */
 void recursion_print(int num)
 {
-	if (num < 0)
+	if (num < 0 && num != INT_MIN)
 	{
 		_putchar('-');
 		num = -num;
 	}
 	if (num / 10 != 0)
 		recursion_print(num / 10);
-	_putchar(num % 10 + '0');
+	_putchar(abs(num % 10) + '0');
 }
 
 /**
