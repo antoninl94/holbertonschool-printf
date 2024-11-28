@@ -1,24 +1,29 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
-#include <stdio.h>
-#include <limits.h>
 
-typedef struct type_from
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_s(va_list args);
+int print_c(va_list args);
+int print_percent(va_list args);
+int print_d_i(va_list args);
+int recursion_print(int a);
+
+/**
+ * struct format_type - link a function to the format letter
+ * @fmt: the format letter
+ * @f: the function lnked to the format letter
+ */
+typedef struct format_type
 {
 	char *fmt;
 	int (*f)(va_list args);
 } type_format;
-
-int _printf(const char *format, ...);
-int print_c(va_list args);
-int print_s(va_list args);
-int print_pourcent(va_list args);
-int printed_chars(int number);
-int pirnt_d_test
 
 #endif
