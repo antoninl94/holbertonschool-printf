@@ -43,7 +43,7 @@ int count_number(int num)
 		{
 			num = num / 10;
 		}
-		return(i + 1);
+		return (i + 1);
 	}
 	for (i = 0; num >= 1; i++)
 	{
