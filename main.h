@@ -7,9 +7,12 @@
 #include <stddef.h>
 
 int _printf(const char *format, ...);
+int _putchar(char c);
 int print_s(va_list args);
 int print_c(va_list args);
 int print_percent(va_list args);
+int print_d_i(va_list args);
+void recursion_print_d_i(int a);
 
 /**
  * struct format_type - link a function to the format letter
