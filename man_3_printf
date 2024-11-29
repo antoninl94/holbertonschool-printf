@@ -1,5 +1,6 @@
+.TH PRINTF
+
 .SH NAME
-printf \- format output
 
 .SH SYNOPSIS
 #include "main.h"
