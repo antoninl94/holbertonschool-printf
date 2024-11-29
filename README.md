@@ -74,6 +74,9 @@ String:[I am a string !]
 Percent:[%]
 Len:[12]
 ```
+## Flowchart
+
+![flow_chart_printf](https://github.com/user-attachments/assets/c45e1282-0dc7-41bc-92b4-7368621fc154)
 
 ## Authors :
 
