@@ -33,7 +33,7 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format _printf.c main.c form
 
 ### Return Value :
 
-The _printf function return ne bytes number printed.
+The _printf function return ne bytes number printed, -1 if format is NULL.
 
 ## Example of using _printf
 
