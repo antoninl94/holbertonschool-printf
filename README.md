@@ -2,6 +2,10 @@
 
 ## Requirements :
 
+- All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+- No more than 5 functions per file
+- The use of global variables is forbidden
+- All the prototypes should be included in the header file : main.h
 
 ## Format :
 
