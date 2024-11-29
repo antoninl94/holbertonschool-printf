@@ -1,0 +1,67 @@
+.SH NAME
+printf \- format output
+
+.SH SYNOPSIS
+#include "main.h"
+
+int printf(const char *format, ...);
+
+.SH DESCRIPTION
+The \fBprintf\fR function prints the format string, interpreting the % directives.
+The format argument is reused as many times as needed to interpret all the provided arguments.
+
+.PP
+A list of flags and their descriptions:
+
+.IP "\fI%c\fR"
+Prints a character. For example, \fB%c\fR with 'A' will print `A`.
+.IP "\fI%s\fR"
+Prints a string of characters. For example, \fB%s\fR with "Hello" will print `Hello`.
+.IP "\fI%%\fR"
+Prints the percentage symbol (%). For example, \fB%%\fR will print `%`.
+.IP "\fI%d\fR, \fI%i\fR"
+Prints a signed integer (decimal). For example, \fB%d\fR or \fB%i\fR with 123 will print `123`.
+
+.PP
+The \fBprintf\fR function processes each format specifier by calling the appropriate helper function,
+which retrieves the value from the argument list and prints the corresponding output.
+
+.PP
+\fB_putchar\fR writes a single character to standard output using the \fIwrite\fR system call.
+
+.PP
+\fBrecursion_print\fR recursively prints an integer, handling negative numbers and \fIINT_MIN\fR.
+
+.PP
+\fBcount_number\fR calculates the number of digits in an integer, excluding the sign.
+
+.SH RETURN VALUE
+The \fB_printf\fR function returns the number of characters printed (excluding the null byte used to terminate the string).
+If an invalid format specifier is encountered, it returns \-1.
+
+.SH SEE ALSO
+write(2), va_start(3), va_arg(3), va_end(3)
+
+.SH EXAMPLES
+.PP
+Example usage:
+
+.EX
+#include "main.h"
+
+int main(void)
+{
+    int number = 42;
+    char letter = 'A';
+    char *str = "Hello, World!";
+
+    printf("%c\n", letter);          // Prints 'A'
+    printf("%s\n", str);             // Prints 'Hello, World!'
+    printf("Number: %d\n", number);  // Prints 'Number: 42'
+    printf("Percentage: %%\n");      // Prints 'Percentage: %'
+    return 0;
+}
+ ##authors :
+ 
+writed by : Tom Makni and Atoinin Lebre
+\0
